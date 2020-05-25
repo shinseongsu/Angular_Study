@@ -2,12 +2,23 @@
   <div class="ui header">Add a Link</div>
 
   <div class="field">
-    <label for="title">Title: </label>
-    <input name="title">
+    <label for="title">Title:</label>
+    <input name="title" id="title" #newtitle>
   </div>
   
   <div class="field">
-    <label for="link">Link: </label>
-    <input name="link">
+    <label for="link">Link:</label>
+    <input name="link" id="link" #newlink>
   </div>
+
+  <button (click)="addArticle(newtitle, newlink)"
+          class="ui positive right floated button">
+    Submit link
+  </button>
+
 </form>
+
+<div class="ui grid posts">
+  <app-article>
+  </app-article>
+</div>
