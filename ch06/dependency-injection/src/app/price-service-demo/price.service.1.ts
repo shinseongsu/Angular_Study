@@ -1,11 +1,11 @@
 export class PriceService {
-    constructor() { }
+  constructor() { }
   
-    calculateTotalPrice(basePrice: number, state: string) {
+  calculateTotalPrice(basePrice: number, state: string) {
         
-      const tax = Math.random();
+    const tax = Math.random();
   
-      return basePrice + tax;
-    }
+    return basePrice + tax;
+  }
   
 }
