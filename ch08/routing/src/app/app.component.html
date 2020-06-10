@@ -1,0 +1,20 @@
+<div class="page-header">
+  <div class="container">
+    <h1>Router Sample</h1>
+    <div class="navLinks">
+      <a [routerLink]="['/home']">Home &nbsp;&nbsp;</a>
+      <a [routerLink]="['/about']">About Us &nbsp;&nbsp;</a>
+      <a [routerLink]="['/contact']">Contact Us &nbsp;&nbsp;</a>
+      |
+      <a [routerLink]="['/products']">Products &nbsp;&nbsp;</a>
+      <a [routerLink]="['/login']">Login &nbsp;&nbsp;</a>
+      <a [routerLink]="['/protected']">Protected &nbsp;&nbsp;</a>
+    </div>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
