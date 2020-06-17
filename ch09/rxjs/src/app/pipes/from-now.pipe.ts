@@ -12,4 +12,4 @@ export class FromNowPipe implements PipeTransform {
 
 export const fromNowPipeInjectables: Array<any> = [
   FromNowPipe
-];
+]; 
