@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import * as Redux from 'redux';
+
+import { AppStore } from './app.store';
+import { AppState } from './app.reducer';
+import { ChatExampleData } from './data/chat-example-data';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +11,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'redux-chat';
+  constructor(@Inject(AppStore) private store: Redux.Store<AppState>) {
+    ChatExampleData(store);
+  }
 }
