@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  Inject
+ } from '@angular/core';
+import { Router } from '@angular/router';
+import { ExampleDef } from './example.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +11,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'styling';
+  constructor(
+    private router: Router,
+    @Inject('ExampleDefs') public examples: ExampleDef[]) {
+  }
 }
